@@ -1,13 +1,15 @@
 # https://leetcode.com/problems/fibonacci-number/description/
-cache = {}
+memo = {}
 
-def fib(n):
-    if n in cache:
-        return cache[n]
+def fib_top_down(n):
+    if n in memo:
+        return memo[n]
     if n <= 1:
         return n
-    cache[n] = fib(n - 1) + fib(n - 2)
-    return cache[n]
+    f = fib_top_down(n-1) + fib_top_down(n-2)
+    memo[n] = f
+    return memo[n]
 
 
-print(fib(30))
+
+print(fib_top_down(30))

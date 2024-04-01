@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/fibonacci-number/description/
-cache = {}
+# cache = {}
 
 def fib(n):
     if n<=1 :
